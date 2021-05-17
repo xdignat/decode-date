@@ -1,0 +1,25 @@
+{
+  "name": "decode-date",
+  "description": "benchmark decode-date",
+  "version": "1.0.0",
+  "author": "Dmitry Ignatyev",
+  "license": "MIT",
+  "main": "lib/decode-date.js",
+  "scripts": {
+    "build": "gulp --gulpfile ./build.ts"
+    "test": "node test.js",
+  },
+  "keywords": [
+    "date",
+    "time"
+    "decode",
+  ],
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "devDependencies": {
+  },
+  "files": [
+    "lib"
+  ]
+}
