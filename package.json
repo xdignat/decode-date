@@ -6,20 +6,30 @@
   "license": "MIT",
   "main": "lib/decode-date.js",
   "scripts": {
-    "build": "gulp --gulpfile ./build.ts"
-    "test": "node test.js",
+    "build": "gulp --gulpfile ./build.ts",
+    "test": "node test.js"
   },
   "keywords": [
     "date",
-    "time"
-    "decode",
+    "time",
+    "decode"
   ],
   "engines": {
     "node": ">=12.0.0"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "files": [
-    "lib"
-  ]
+    "src","lib","out"
+  ],
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xdignat/decode-date.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xdignat/decode-date/issues"
+  },
+  "homepage": "https://github.com/xdignat/decode-date#readme"
 }
