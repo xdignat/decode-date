@@ -2,7 +2,7 @@
 
 ```npm install decode-date```
 
-###Fast decompose timestamp into parts (UTC): year, month, day, hours, minutes, seconds, day of the week.
+###Fast decompose timestamp into parts (UTC): year, month, day, hours, minutes, seconds, day of the week.###
 
 Demo:
 
@@ -30,7 +30,7 @@ console.log(wasmDecodeDateC(now));
 //}
 ```
 
-###Benchmark
+###Benchmark###
 Test on **node** v14.16
 
 ```
