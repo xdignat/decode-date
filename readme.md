@@ -33,6 +33,8 @@ console.log(wasmDecodeDateC(now));
 ### Benchmark
 Test on **node** v14.16
 
+
+Operations per second:
 ```
  2440144 dateDecodeDate        //native: date.getUTCFullYear()...
  8580758 jsDecodeDate          //by js
