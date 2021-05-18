@@ -32,9 +32,23 @@ console.log(info);
 
 ### Тестирование
 
+```Node v14.16```
 Для тестирования написал тело функции на Си с компиляцией в WASM.
 В итоге, оказалось, что преимуществ в этой технологии нету. Так как много процессорного времени затрачивается на непосредственный вызов функции и на передачу значений через буфер обмена.
 
 Для компиляции использовал ресурсы
-(webassembly.studio)[https://webassembly.studio/] или (WasmFiddle)[https://wasdk.github.io/WasmFiddle/]
+[webassembly.studio](https://webassembly.studio/) или [WasmFiddle](https://wasdk.github.io/WasmFiddle/)
+
+Результат тестирования, операций в секунду:
+```
+ 2440144 dateDecodeDate        //native: date.getUTCFullYear()...
+ 8580758 jsDecodeDate          //by js
+ 8370737 wasmDecodeDateA       //by wasm
+ 8110711 wasmDecodeDateB       //by wasm
+ 8550755 wasmDecodeDateC       //by wasm
+15491449 wasmDecodeDate_C_Proc //by wasm without read values from memory
+```
+Более, чем в 3 раза код (```jsDecodeDate```) быстрее, чем методы класса ```Date()```. А для кода ```WASM``` половину процессорного времени уходит на передачу данных.
+Получается, что нет нужды использовать ```WASM```, пока не оптимизируют его до нормального уровня. Так в ходе тестирования возникло подозрение, что в ```WASM``` медлено происходит конвертация из ```float``` в ```integer```. Технология ещё сырая.
+
 
