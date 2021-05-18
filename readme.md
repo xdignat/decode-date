@@ -4,6 +4,8 @@
 
 ### Fast decompose timestamp into parts (UTC): year, month, day, hours, minutes, seconds, day of the week.
 
+[Родной язык](readme.ru.md)
+
 Demo:
 
 ```node test.js```
